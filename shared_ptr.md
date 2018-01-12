@@ -41,7 +41,7 @@ template<class _Ux,
     }
 ```
 
-## shared_ptr的引用计数机制
+## Shared_ptr的引用计数机制
 
 由于shared_ptr的多个指针共同管理对象的机制，为了达到智能管理的效果，引入引用计数机制。
 
@@ -88,7 +88,7 @@ int main()
 
 ```
 
-## shared_ptr的赋值方法
+## Shared_ptr的赋值方法
 
   1. 默认构造方法，最多三个参数：对象类型；自定义的delete方法，自定义的allocate方法
 
@@ -348,7 +348,7 @@ int main()
 
 
 
-## shared_ptr与unique_ptr,weak_ptr的不同
+## Shared_ptr与unique_ptr,weak_ptr的不同
 
  1. shared_ptr是引用计数的智能指针，而unique_ptr不是。可以有多个shared_ptr实例指向同一块动态分配的内存，当最后一个shared_ptr离开作用域时，才会释放这块内存。unique_ptr意味着所有权。单个unique_ptr离开作用域时，会立即释放底层内存。
 
@@ -356,7 +356,7 @@ int main()
 
  3. weak_ptr是为了解决shared_ptr可能存在的循环计数的问题而提出的一种智能指针，通常与shared_ptr配合使用。如果将一个shared_ptr指针赋值给weak_ptr指针，对shared_ptr指针本身不会造成任何影响。对于weak_ptr指针来说，却可以通过一些方法来探测被赋值过来的shared_ptr指针的有效性，同时weak_ptr指针也可以间接操纵shared_ptr指针。
 
-### shared_ptr 总结
+### Shared_ptr 总结
 
 shared_ptr关键在于共享的对象，只要对象还被引用就不会被释放；这比只能作用单一对象的unique_ptr来说便捷了许多。不过就算有了引用计数机制也不能保证没有内存泄漏，如果出现了循环引用，依然无法有效回收内存，这时候就需要weak_ptr的协助
 
