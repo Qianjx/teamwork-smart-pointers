@@ -10,5 +10,5 @@
     * [shared_ptr](shared_ptr.md)
     * [weak_ptr](weak_ptr.md)
 * [C++ boost库中的智能指针](boost-smart-pointers.md)
-* [Rust 库中的智能指针](rust-smart-poiners.md)
+* [Rust 中的智能指针](rust-smart-poiners.md)
 
