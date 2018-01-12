@@ -56,11 +56,11 @@
   
     类似于shared_ptr，intrusive_ptr也存在引用计数机制，实际上官网上表示，除非shared_ptr不能满足你的需求，不然推荐使用shared_ptr。intrusive_ptr的特别之处在于，它的计数函数接口（intrusive_ptr_add_ref和intrusive_ptr_release）是用户自定义的。通常使用instrusive_ptr的情况有：
 
-    - 已经写好了内部引用计数器的代码，而我们又没有时间去重写它(或者不能获得那些代码)。
+      - 已经写好了内部引用计数器的代码，而我们又没有时间去重写它(或者不能获得那些代码)。
 
-    - 你需要把 this 当作智能指针来使用。
+      - 你需要把 this 当作智能指针来使用。
 
-    - shared_ptr的引用计数器分配严重影响了程序的性能。
+      - shared_ptr的引用计数器分配严重影响了程序的性能。
 
 
 
