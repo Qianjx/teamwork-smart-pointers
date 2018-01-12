@@ -2,9 +2,7 @@
 
 ## 引言
 
- C++扩展库boost中也有着有关智能指针的定义，在boost中的智能指针包括
- scoped_ptr，scoped_array,shared_ptr, weak_ptr, intrusive_ptr, local_shared_ptr,
- 其中的shared_ptr和weak_ptr已经加入了C++11标准。
+ boost是非C++标准库（STL），但boost库中也有着大量关于智能指针的定义和使用。在boost中的智能指针包括 scoped_ptr，scoped_array,shared_ptr, weak_ptr, intrusive_ptr, local_shared_ptr,而且其中的shared_ptr和weak_ptr已经加入了C++11标准。
 
 ## 相关指针的介绍
 
@@ -54,7 +52,7 @@
 
 5. intrusive_ptr
   
-    类似于shared_ptr，intrusive_ptr也存在引用计数机制，实际上官网上表示，除非shared_ptr不能满足你的需求，不然推荐使用shared_ptr。intrusive_ptr的特别之处在于，它的计数函数接口（intrusive_ptr_add_ref和intrusive_ptr_release）是用户自定义的。通常使用instrusive_ptr的情况有：
+    类似于shared_ptr，intrusive_ptr也存在引用计数机制，实际上官网上表示，除非shared_ptr不能满足你的需求，不然推荐使用shared_ptr。intrusive_ptr的特别之处在于，它的提供计数函数接口（intrusive_ptr_add_ref和intrusive_ptr_release），要求用户自定义。通常使用instrusive_ptr的情况有：
 
       - 已经写好了内部引用计数器的代码，而我们又没有时间去重写它(或者不能获得那些代码)。
 
