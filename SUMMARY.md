@@ -1,7 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [为什么是智能指针](smart-pointers.md)
+* [为什么是智能指针](README.md)
 * [C++ 指针存在的缺陷](cpp-raw-pointer-problem.md)
 * [C++ 中的智能指针](cpp-smart-pointers.md)
     * [引言](introduction.md)
