@@ -14,17 +14,17 @@
 
     - 实例
 
-```c++
-#include <boost/scoped_ptr.hpp>
-#include <iostream>
-int main() 
-{ 
-  boost::scoped_ptr<int> i(new int); 
-  *i = 1; 
-  *i.get() = 2; 
-  i.reset(new int); 
-} 
-```
+    ```c++
+    #include <boost/scoped_ptr.hpp>
+    #include <iostream>
+    int main() 
+    { 
+      boost::scoped_ptr<int> i(new int); 
+      *i = 1; 
+      *i.get() = 2; 
+      i.reset(new int); 
+    } 
+    ```
 
 2. scoped_array
 
@@ -32,17 +32,17 @@ int main()
 
     - 实例
 
-```c++
-#include <boost/scoped_array.hpp>
-#include <iostream>
-int main()
-{
-  boost::scoped_array<int> i(new int[2]);
-  *i.get() = 1;
-  i[1] = 2;
-  i.reset(new int[3]);
-}
-```
+    ```c++
+      #include <boost/scoped_array.hpp>
+      #include <iostream>
+      int main()
+      {
+        boost::scoped_array<int> i(new int[2]);
+        *i.get() = 1;
+        i[1] = 2;
+        i.reset(new int[3]);
+      }
+    ```
 
 3. shared_ptr
 
