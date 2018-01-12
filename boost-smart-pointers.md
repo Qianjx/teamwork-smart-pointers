@@ -12,7 +12,7 @@
 
     一个scoped_ptr独占一个动态分配的对象。这个类似于unique_ptr，它们都只能处理一个对象，一个unique_ptr不能传递它所包含的对象的所有权到另一个unique_ptr。不过scoped_ptr比起unique_ptr要简单，scoped_ptr只是简单保存和独占一个内存地址。一旦用另一个地址来初始化，这个动态分配的对象将在析构阶段释放。
 
-- 实例
+    - 实例
 
 ```c++
 #include <boost/scoped_ptr.hpp>
@@ -30,7 +30,7 @@ int main()
 
     这个正如名称中的array，scoped_array是动态分配的数组对象，特点与scoped_ptr一样，都只是保存和占有内存地址。此外它重载了[]运算符，即确实可以像数组一样访问它的元素。
 
-- 实例
+    - 实例
 
 ```c++
 #include <boost/scoped_array.hpp>
