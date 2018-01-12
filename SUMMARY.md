@@ -2,6 +2,9 @@
 
 * [为什么是智能指针](README.md)
 * [C++ 指针存在的缺陷](cpp-raw-pointer-problem.md)
+    * [C++ 的原生指针](cpp-raw-pointer.md)
+    * [悬空指针与野指针](empty-pointer.md)
+    * [内存泄漏](memory-leak.md)
 * [C++ 中的智能指针](cpp-smart-pointers.md)
     * [引言](introduction.md)
     * [从C++ 98讲起：auto_ptr](auto_ptr.md)
